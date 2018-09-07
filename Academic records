@@ -1,0 +1,26 @@
+Json. parse('{}'); //{}#
+Json. parse('true'); //true#
+Json. parse('"foo"'); //"FOO"#
+json. parse('[1,5 "false"]);#
+Json. parse('null'); null
+
+Json. parse('{"p":5}; (key, value)=>
+Type of value==='number'
+?value*2// return value*2 for numbers
+: value      //return everything else unchanged
+);
+
+//{p:10}
+
+Json. parse('{"1":1,"2":2,"3":{"4":4,"5":{"6":6}}}',(key, value)=>{
+Console.log(key);//log the current property name, the last is " "
+return value;//return the unchanged property name.
+};
+
+//1
+//2
+//4
+//6
+//5
+//3
+//" "
